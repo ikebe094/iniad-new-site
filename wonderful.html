@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/sunburst.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script src="./js/highlight.pack.js"></script>
+    <script src="./js/hello.js"></script>
+    <title>コンソール・クイズの答え</title>
+</head>
+
+<body>
+    <div id="header-fixed">
+        <div id="header-bk">
+            <div id="header">
+            </div>
+            <div id="header">
+                <a href="./business.html">情報連携ビジネス・コース</a>
+            </div>
+            <div id="header">
+                <a href="./civil-system.html">情報連携シビルシステム・コース</a>
+            </div>
+            <div id="header">
+                <a href="./design.html">情報連携デザイン・コース</a>
+            </div>
+            <div id="header">
+                <a href="./engineering.html">情報連携エンジニアリング・コース</a>
+            </div>
+            <div id="header">
+                <a href="./iot-api.html">INIAD API</a>
+            </div>
+        </div>
+    </div>
+    <div id="body-bk">
+        <div id="body">
+            <h1>コンソール・クイズの解答例</h1>
+            <p>INIADの1年次の必修科目「コンピュータサイエンス概論」ではPythonというプログラミング言語を学習します。興味がある方は調べてみましょう。</p>
+            <h2 class="headline">模範解答</h2>
+            <pre><code>
+            def max_len(xs):
+                maxval = -1
+                for x in xs:
+                    if len(x) > maxval:
+                        maxval = len(x)
+                return maxval
+            </code></pre>
+            <h2 class="headline">ダメな解答例1</h2>
+            <pre><code>
+            def max_len(xs):
+                maxval = -1
+                for x in xs:
+                   if len(x) > maxval:
+                       maxval = len(x)
+            print(maxval)  # この行が違う
+            </code></pre>
+            <p>「関数を定義してください」という問題なので、結果をprintすると答えを返すことができません。</p>
+            <h2 class="headline">ダメな解答例2</h2>
+            <pre><code>
+            def max_len(xs):
+                maxval = -1
+                for x in xs:
+                    if len(x) > maxval:
+                        maxval = len(x)
+                return maxval
+            max_len(input())  # この行が余計
+            </code></pre>
+            <p>「関数を定義してください」とだけ書いてあるので、関数定義ができていれば他は不要です。</p>
+            <p class=exp>
+                なお、この問題は定期試験で実際に出題された問題です。プログラムの記述式問題では、エラーなくプログラムが実行できること、プログラムの動作をもとに正解・不正解を判断します。余分なコードや、大文字小文字の区別、スペルミスなどに十分注意しましょう。動作例がついている場合は、これを使って動作確認をすることも重要です。
+            </p>
+        </div>
+    </div>
+    <div id="footer-fixed">
+        <div id="footer-bk">
+            <div id="footer">
+                <img src="./img/iniad-logo.png" alt="iniad-logo" width="256">
+            </div>
+        </div>
+    </div>
+</body>
+<!-- このソースコード汚いなぁ、そう思ったらぜひINIADへ。 -->
+
+</html>
